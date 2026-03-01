@@ -1,0 +1,16 @@
+body{
+    background-image: url("../images/wallpaper.jpg");
+    background-size: fill;
+}
+
+@media screen and (min-width: 700px){
+	.window{
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	.window{
+		width: 40%;
+	}
+}
