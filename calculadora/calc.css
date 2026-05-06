@@ -1,0 +1,83 @@
+@media screen and (max-width: 300px) {
+    .container-main{
+        width: 100%;
+    }
+    .container-buttons{
+        grid-template-rows: 20% 20% 20% 20% 20% 20%;
+    }
+    .btn{
+        font-size: medium;
+    }
+}
+@media screen and (min-width: 301px){
+    .container-main{
+        width: 300px;
+    }
+    .container-buttons{
+        grid-template-rows: 60px 60px 60px 60px 60px 60px;
+    }
+    .btn{
+        font-size: x-large;
+    }
+}
+
+.container-main{
+    background-color: rgb(64, 68, 64);
+    border-radius: 20px;
+    padding: 5px;
+
+    margin: 25px auto;
+    height:max-content;
+}
+
+.container-result{
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#result{
+    color:black;
+    font-size: large;
+    padding-left: 3px;
+}
+
+.container-buttons{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+    grid-template-areas:'s s s s'
+                        'a b c d'
+                        'e f g h'
+                        'i j k l'
+                        'm n o p'
+                        'q z z p';
+}
+
+.a{grid-area: a;}
+.b{grid-area: b;}
+.c{grid-area: c;}
+.d{grid-area: d;}
+.e{grid-area: e;}
+.g{grid-area: g;}
+.h{grid-area: h;}
+.i{grid-area: i;}
+.j{grid-area: j;}
+.l{grid-area: l;}
+.m{grid-area: m;}
+.n{grid-area: n;}
+.o{grid-area: o;}
+.p{grid-area: p;}
+.q{grid-area: q;}
+.s{grid-area: s;}
+
+.btn{
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(120, 124, 120);
+}
+.btn:hover{
+    background-color: rgb(162, 168, 162);
+}
+.btn:active{
+    background-color: rgb(171, 221, 171);
+}

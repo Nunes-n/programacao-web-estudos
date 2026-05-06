@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-buttons">
+            <div class="container-result s">
+                <p id="result"></p>
+            </div>
+            <button onclick="addOp('+')" class="btn a" id="plus">+</button>
+            <button onclick="addOp('-')" class="btn b" id="minus">-</button>
+            <button onclick="addOp('*')" class="btn c" id="multiply">x</button>
+            <button onclick="addOp('/')" class="btn d" id="divide">/</button>
+
+            <button onclick="addNum('7')" class="btn e" id="7">7</button>
+            <button onclick="addNum('8')" class="btn f" id="8">8</button>
+            <button onclick="addNum('9')" class="btn g" id="9">9</button>
+            <button onclick="addC()" class="btn h" id="c">C</button>
+
+            <button onclick="addNum('4')" class="btn i" id="4">4</button>
+            <button onclick="addNum('5')" class="btn j" id="5">5</button>
+            <button onclick="addNum('6')" class="btn k" id="6">6</button>
+            <button onclick="addDel()" class="btn l" id="del">del</button>
+
+            <button onclick="addNum('1')" class="btn m" id="1">1</button>
+            <button onclick="addNum('2')" class="btn n" id="2">2</button>
+            <button onclick="addNum('3')" class="btn o" id="3">3</button>
+            <button onclick="addEnter()" class="btn p" id="enter">=</button>
+
+            <button onclick="addNum('0')" class="btn q" id="0">0</button>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
