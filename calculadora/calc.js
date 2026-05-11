@@ -76,6 +76,27 @@ function addEnter(){
 
     let resultado = 0
     let x = 0;
+
+    let r;
+    while (x < result.length){
+        if (result[x + 1] != null){
+            if (result[x] == '*'){
+                r = (Number(result[x - 1]) * Number(result[x + 1]));
+                result[x - 1] = r;
+                result[x + 1] = "1";
+            }
+            else{
+                if (result[x] == "/"){
+                    r = (Number(result[x - 1]) / Number(result[x + 1]));
+                    result[x - 1] = r;
+                    result[x + 1] = "1";
+                }
+            }
+        }
+        x++;
+    }
+
+    x = 0;
     while (x < result.length){
         if (result[x + 1] != null){
             if (result[x] == "+"){
@@ -108,41 +129,6 @@ function addEnter(){
         x++;
     }
 
-    /*
-    while (x < result.length){
-        if (result[x + 1] != null){
-            if (result[x] == '*'){
-                resultado += (Number(result[x - 1]) * Number(result[x + 1]));
-                result[x - 1] = "1";
-            }
-            else{
-                if (result[x] == "/"){
-                    resultado += (Number(result[x - 1]) / Number(result[x + 1]));
-                    result[x - 1] = "1";
-                }
-            }
-        }
-        x++;
-    }
-
-    x = 0;
-    while (x < result.length){
-        if (result[x + 1] != null){
-            if (result[x] == "+"){
-                resultado += Number(result[x + 1]);
-                x++;
-            }
-            else{
-                if (result[x] == "-"){
-                    resultado = resultado - Number(result[x + 1]);
-                    x++;
-                }
-            }
-        }
-
-        x++;
-    }*/
-
     if (result[1] == null) {resultado = result[0];}
 
     document.getElementById("result").textContent = resultado;
@@ -151,5 +137,8 @@ function addEnter(){
 }
 
 function addDel(){
-    document.getElementById("result").textContent.slice(0, -1);
+    const p = document.getElementById("result").textContent;
+    const pr = p.slice(0, -1);
+    document.getElementById("result").textContent = pr;
+
 }
